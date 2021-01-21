@@ -4,18 +4,33 @@
   height: 50px;
   letter-spacing: 0.5px;
   line-height: 50px;
-  padding: 0 35px 0 35px;
+  padding: 0 15px;
   font-size: 15px;
-  background-color: black;
+  background: #000;
   color: white;
   text-transform: uppercase;
   font-weight: bolder;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.2s ease-in;
 
   &:hover {
     background-color: white;
     color: black;
     border: 1px solid black;
+  }
+}
+
+.google-sign-in {
+  background-color: transparent;
+  border: 1px solid #357ae8;
+  color: #357ae8;
+
+  &:hover {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    outline: none;
   }
 }

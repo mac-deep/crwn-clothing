@@ -1,14 +1,10 @@
-.sign-in {
-  width: 380px;
+.sign-up {
   display: flex;
   flex-direction: column;
+  width: 380px;
 
   .title {
     margin: 10px 0;
     text-transform: capitalize;
-  }
-  .buttons {
-    display: flex;
-    justify-content: space-between;
   }
 }
