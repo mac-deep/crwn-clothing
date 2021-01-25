@@ -1,4 +1,6 @@
 .custom-button {
+  display: flex;
+  justify-content: center;
   min-width: 165px;
   width: auto;
   height: 50px;
@@ -13,7 +15,7 @@
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  transition: all 0.2s ease-in;
+  transition: all 0.2s ease;
 
   &:hover {
     background-color: white;
@@ -32,5 +34,17 @@
     color: white;
     border: none;
     outline: none;
+  }
+}
+
+.inverted {
+  background-color: white;
+  color: black;
+  border: none;
+
+  &:hover {
+    background: #000;
+    color: white;
+    border: none;
   }
 }

@@ -3,6 +3,11 @@
   flex-direction: column;
   width: 380px;
 
+  h2,
+  span {
+    text-transform: capitalize;
+  }
+
   .title {
     margin: 10px 0;
     text-transform: capitalize;
