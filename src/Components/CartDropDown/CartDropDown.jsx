@@ -27,7 +27,9 @@ const CartDropDown = ({ cartItems, history, dispatch }) => {
           dispatch(toggleCartHidden());
         }}
       >
-        Go to CheckOut
+        <span>
+          Go to CheckOut <i class="fas fa-shopping-cart"></i>
+        </span>
       </CustomButton>
     </div>
   );

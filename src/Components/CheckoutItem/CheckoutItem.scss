@@ -1,13 +1,12 @@
 .checkout-item {
   width: 100%;
   display: flex;
-  //   justify-content: space-between;
   min-height: 100px;
   border-bottom: 1px solid darkgray;
   padding: 15px 0;
   font-size: 20px;
   align-items: center;
-  background-color: darkkhaki;
+  // background-color: darkkhaki;
 
   .image-container {
     width: 23%;
@@ -18,15 +17,36 @@
       height: 100%;
     }
   }
+
   .name,
   .quantity,
   .price {
     width: 25%;
   }
+
   .quantity {
-    padding-left: 20px;
+    display: flex;
+
+    .arrow {
+      cursor: pointer;
+      transition: all 0.1s ease;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    .value {
+      margin: 0 10px;
+    }
   }
+
   .remove-button {
     cursor: pointer;
+    transition: all 0.1s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }

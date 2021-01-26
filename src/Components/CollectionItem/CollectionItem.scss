@@ -1,8 +1,9 @@
 .collection-item {
-  width: 22%;
+  width: 22vw;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  height: 350px;
+  height: 360px;
   align-items: center;
   position: relative;
 
@@ -38,15 +39,16 @@
     height: 5%;
     display: flex;
     justify-content: space-between;
+    box-sizing: border-box;
     font-size: 18px;
 
     .name {
-      width: 90%;
+      // width: 80%;
       margin-bottom: 15px;
     }
 
-    .price {
-      width: 10%;
-    }
+    // .price {
+    //   width: 20%;
+    // }
   }
 }

@@ -13,14 +13,14 @@ import { selectCurrentUser } from "../../Redux/user/userSelectors";
 
 const Header = ({ currentUser, hidden }) => (
   <div className="header">
-    <Link to="/?" className="logo-container">
+    <Link to="/" className="logo-container">
       <Logo />
     </Link>
-    {currentUser ? (
+    {/* {currentUser ? (
       <div className="option">
         <h1>Welcome, {currentUser.displayName}</h1>
       </div>
-    ) : null}
+    ) : null} */}
 
     <div className="options">
       <Link to="/shop" className="option">
@@ -35,11 +35,15 @@ const Header = ({ currentUser, hidden }) => (
             console.log("you signed out");
           }}
         >
-          SignOut
+          <span>
+            SignOut <i class="fas fa-sign-out-alt"></i>
+          </span>
         </div>
       ) : (
         <Link className="option" to="/signin">
-          Sign In
+          <span>
+            Sign In <i class="fas fa-sign-in-alt"></i>
+          </span>
         </Link>
       )}
       <CartIcon />
