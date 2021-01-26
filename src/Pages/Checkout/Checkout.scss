@@ -6,6 +6,7 @@
   align-items: center;
   margin: 50px auto;
   box-sizing: border-box;
+  background-color: darkgreen;
 
   .checkout-header {
     width: 100%;
@@ -25,5 +26,11 @@
     &:last-child {
       width: 8%;
     }
+  }
+
+  .total {
+    margin-top: 30px;
+    margin-left: auto;
+    font-size: 36px;
   }
 }
