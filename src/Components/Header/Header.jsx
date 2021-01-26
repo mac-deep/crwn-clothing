@@ -36,13 +36,13 @@ const Header = ({ currentUser, hidden }) => (
           }}
         >
           <span>
-            SignOut <i class="fas fa-sign-out-alt"></i>
+            SignOut <i className="fas fa-sign-out-alt"></i>
           </span>
         </div>
       ) : (
         <Link className="option" to="/signin">
           <span>
-            Sign In <i class="fas fa-sign-in-alt"></i>
+            Sign In <i className="fas fa-sign-in-alt"></i>
           </span>
         </Link>
       )}
