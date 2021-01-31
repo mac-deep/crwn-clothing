@@ -1,7 +1,8 @@
 .collection-item {
-  width: 22vw;
+  width: 20vw;
   padding: 10px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   height: 360px;
   align-items: center;
@@ -12,7 +13,7 @@
       opacity: 0.8;
       transition: all 0.2s ease;
     }
-    .custom-button {
+    button {
       opacity: 0.85;
       display: flex;
     }
@@ -26,12 +27,16 @@
     margin-bottom: 5px;
   }
 
-  .custom-button {
+  button {
     width: 60%;
-    opacity: 70%;
+    opacity: 0.7;
     position: absolute;
     top: 255px;
     display: none;
+
+    &:hover {
+      color: white;
+    }
   }
 
   .collection-footer {
@@ -50,5 +55,11 @@
     // .price {
     //   width: 20%;
     // }
+  }
+}
+
+@media (max-width: 600px) {
+  .collection-item {
+    width: 80vw;
   }
 }
