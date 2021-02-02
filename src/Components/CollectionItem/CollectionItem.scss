@@ -1,10 +1,10 @@
 .collection-item {
-  width: 20vw;
+  width: 30%;
   padding: 10px;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 360px;
+  height: 400px;
   align-items: center;
   position: relative;
 
@@ -21,7 +21,7 @@
 
   .image {
     width: 100%;
-    height: 95%;
+    height: 90%;
     background-size: cover;
     background-position: center;
     margin-bottom: 5px;
@@ -37,29 +37,47 @@
     &:hover {
       color: white;
     }
+
+    @media (max-width: 800px) {
+      display: block;
+      opacity: 0.9;
+      height: 50px;
+      min-width: 80%;
+      padding: 0 5px;
+    }
   }
 
   .collection-footer {
     width: 100%;
-    height: 5%;
+    height: 10%;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
     font-size: 18px;
+    line-height: 20px;
 
     .name {
-      // width: 80%;
       margin-bottom: 15px;
     }
 
-    // .price {
-    //   width: 20%;
-    // }
+    .price {
+      font-weight: 500;
+    }
   }
-}
 
-@media (max-width: 600px) {
-  .collection-item {
-    width: 80vw;
+  @media (max-width: 800px) {
+    width: 50%;
+    padding: 10px;
+    height: 360px;
+
+    &:hover {
+      .image {
+        opacity: unset;
+      }
+
+      button {
+        opacity: unset;
+      }
+    }
   }
 }

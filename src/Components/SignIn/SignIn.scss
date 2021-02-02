@@ -13,7 +13,24 @@
     text-transform: capitalize;
   }
   .buttons {
+    // width: 200px;
     display: flex;
     justify-content: space-between;
+
+    // @media (max-width: 800px) {
+    //   width: 100%;
+    // }
+
+    button {
+      margin-right: 10px;
+      @media (max-width: 800px) {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    width: 360px;
+    margin-bottom: 50px;
   }
 }

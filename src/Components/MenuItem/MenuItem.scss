@@ -69,3 +69,10 @@
     font-size: 16px;
   }
 }
+
+@media (max-width: 800px) {
+  .menu-item {
+    width: 80vw;
+    height: 240px !important;
+  }
+}

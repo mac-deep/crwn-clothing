@@ -19,12 +19,16 @@
 
   .header-block {
     text-transform: capitalize;
-    width: 23%;
+    width: 22.5%;
     font-size: 15px;
     font-weight: 500;
 
     &:last-child {
-      width: 8%;
+      width: 10%;
+    }
+
+    @media (max-width: 800px) {
+      font-size: 12px;
     }
   }
 
@@ -48,5 +52,9 @@
     span {
       font-weight: 600;
     }
+  }
+
+  @media (max-width: 800px) {
+    width: 100%;
   }
 }

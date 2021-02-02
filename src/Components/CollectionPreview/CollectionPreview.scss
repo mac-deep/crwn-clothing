@@ -7,9 +7,22 @@
     font-size: 28px;
     margin-bottom: 25px;
   }
+  a {
+    &:hover {
+      border-bottom: 2px solid black;
+    }
+  }
 
   .preview {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 800px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 800px) {
+    align-items: center;
   }
 }

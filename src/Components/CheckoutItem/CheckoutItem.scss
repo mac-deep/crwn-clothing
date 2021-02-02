@@ -9,7 +9,7 @@
   // background-color: darkkhaki;
 
   .image-container {
-    width: 23%;
+    width: 22.5%;
     padding-right: 15px;
 
     img {
@@ -21,7 +21,7 @@
   .name,
   .quantity,
   .price {
-    width: 25%;
+    width: 22.5%;
   }
 
   .quantity {
@@ -42,6 +42,9 @@
   }
 
   .remove-button {
+    width: 10%;
+    display: flex;
+    justify-content: center;
     cursor: pointer;
     transition: all 0.1s ease;
 

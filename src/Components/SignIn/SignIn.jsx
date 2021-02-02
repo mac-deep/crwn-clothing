@@ -58,7 +58,9 @@ class SignIn extends React.Component {
               isGoogle={true}
               type="button"
             >
-              SIGN IN with Google
+              <span>
+                SIGN IN with <i class="fab fa-google"></i>
+              </span>
             </CustomButton>
           </div>
         </form>
