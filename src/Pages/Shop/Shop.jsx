@@ -1,11 +1,16 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { Route } from "react-router-dom";
 import { connect } from "react-redux";
 
-import CollectionContainer from "../Collection/CollectionContainer";
-import CollectionOverviewContainer from "../../Components/CollectionOverview/CollectionOverviewContainer";
-
 import { fetchCollectionStartAsync } from "../../Redux/shop/shopActions";
+import Spinner from "../../Components/Spinner/Spinner";
+
+const CollectionOverviewContainer = lazy(() =>
+  import("../../Components/CollectionOverview/CollectionOverviewContainer")
+);
+const CollectionContainer = lazy(() =>
+  import("../Collection/CollectionContainer")
+);
 
 class Shop extends React.Component {
   componentDidMount() {
@@ -17,15 +22,17 @@ class Shop extends React.Component {
     const { match } = this.props;
     return (
       <div className="shop-page">
-        <Route
-          exact
-          path={`${match.path}/`}
-          component={CollectionOverviewContainer}
-        />
-        <Route
-          path={`${match.path}/:collectionId`}
-          component={CollectionContainer}
-        />
+        <Suspense fallback={<Spinner />}>
+          <Route
+            exact
+            path={`${match.path}/`}
+            component={CollectionOverviewContainer}
+          />
+          <Route
+            path={`${match.path}/:collectionId`}
+            component={CollectionContainer}
+          />
+        </Suspense>
       </div>
     );
   }
