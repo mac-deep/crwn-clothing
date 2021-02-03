@@ -7,7 +7,10 @@ import MenuItem from "../MenuItem/MenuItem";
 import { selectDirectorySections } from "../../Redux/directory/directorySelectors";
 
 const Directory = ({ sections }) => (
-  <div className="directory-menu">
+  <div
+    className="directory-menu"
+    style={{ width: "100%", display: "flex", flexWrap: "wrap" }}
+  >
     {sections.map(({ id, ...otherSectionProps }) => (
       <MenuItem key={id} {...otherSectionProps} />
     ))}

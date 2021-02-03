@@ -1,7 +1,7 @@
 .directory-menu {
-  width: 100% !important;
-  display: flex !important;
-  flex-wrap: wrap !important;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   @media (max-width: 800px) {
