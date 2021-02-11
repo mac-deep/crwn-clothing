@@ -28,7 +28,7 @@ const CartDropDown = ({ cartItems, history, dispatch }) => {
         }}
       >
         <span>
-          Go to CheckOut <i class="fas fa-shopping-cart"></i>
+          Go to CheckOut <i className="fas fa-shopping-cart"></i>
         </span>
       </CustomButton>
     </div>

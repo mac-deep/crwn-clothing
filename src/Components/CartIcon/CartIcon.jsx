@@ -7,12 +7,36 @@ import { ReactComponent as ShoppingIcon } from "../../Assets/cart.svg";
 import { toggleCartHidden } from "../../Redux/cart/cartActions";
 import { selectCartItemsCount } from "../../Redux/cart/cartSelectors";
 
-const CartIcon = ({ toggleCartHidden, itemCount }) => (
-  <div className="cart-icon" onClick={toggleCartHidden}>
-    <ShoppingIcon className="shopping-icon" />
-    <span className="item-count">{itemCount}</span>
-  </div>
-);
+const CartIcon = ({ toggleCartHidden, itemCount }) => {
+  return (
+    <div
+      // className="cart-icon"
+      style={{
+        width: "45px",
+        height: "45px",
+        position: "relative",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+      onClick={toggleCartHidden}
+    >
+      <ShoppingIcon className="shopping-icon" />
+      <span
+        // className="item-count"
+        style={{
+          position: "absolute",
+          top: "16px",
+          fontSize: "16px",
+          fontWeight: "600",
+          bottom: "9px",
+        }}
+      >
+        {itemCount}
+      </span>
+    </div>
+  );
+};
 
 const mapDispatchToProps = (dispatch) => ({
   toggleCartHidden: () => dispatch(toggleCartHidden()),
